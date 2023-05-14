@@ -15,7 +15,7 @@ export const Home = ({setPokemonData}) => {
 
     const getPokemons = () => {
         const endpoints = []
-        const pokemonAmount = 20 //Defines how much pokemons will be displayed
+        const pokemonAmount = 100 //Defines how much pokemons will be displayed
         for(let i=1; i<=pokemonAmount;i++){
             endpoints.push(`https://pokeapi.co/api/v2/pokemon/${i}`)
         }

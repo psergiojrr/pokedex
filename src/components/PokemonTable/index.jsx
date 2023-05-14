@@ -10,6 +10,9 @@ import { typeHandler } from '../../utils';
 
 export default function PokemonTable({pokemonData}) {
 const {height,weight, types} = pokemonData
+const convertedHeight = height*10 //Converts decimetres to cm
+const convertedWeight = weight*0.1 // Converts hectogram to kilogram
+
   return (
     <TableContainer component={Paper} sx={{height: "fit-content", maxWidth: "250px", boxShadow: "none"}}>
       <Table aria-aria-label='a dense table'>
@@ -19,7 +22,7 @@ const {height,weight, types} = pokemonData
                     {"Height"}
                 </TableCell>
                 <TableCell component="th" scope="row">
-                    {height + "cm"}
+                    {convertedHeight + "cm"}
                 </TableCell>
             </TableRow>
             <TableRow sx={{ '&:last-child td, &:last-child th': { border: 0 } }}>
@@ -27,7 +30,7 @@ const {height,weight, types} = pokemonData
                     {"Weight"}
                 </TableCell>
                 <TableCell component="th" scope="row">
-                    {weight + "g"}
+                    {convertedWeight + "kg"}
                 </TableCell>
             </TableRow>
             <TableRow sx={{ '&:last-child td, &:last-child th': { border: 0 } }}>
